@@ -1,0 +1,55 @@
+---
+title: "CodeBook"
+output:
+  html_document:
+    df_print: paged
+---
+
+The Data for this Assignment was obtained from [Data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) As Zip. The Analysis file contains the code used to clean and obtain the TidyData in CSV format.
+
+The Main Tasks for this Assignment were as outlined below:
+
+1) Obtain the Data in Zip Format and Extract: 
+
+  - Extracted it to the Folder "UCI HAR Dataset" in working directory
+2) Name each variable and observation according to the information provided: 
+ 
+  - X_Train.txt and X_Test.txt contains the actual observations with dimentions of (rows 7352   cols 564) for Train and (rows 2947, cols 564) for Test respectively
+  
+  - The activity_labels.txt : 6 rows, 2 columns, has the code and its description
+  
+  - subject_test.txt and subject_train.txtcontains the subject Id Number which runs from 1:30.
+  
+  - The y_Train and y_Test contains the actual activity observed coded from 1:6
+
+3) Joined Dataset (CleanData) 
+
+  - Obtained after joining the Train and Test Datasets, has 10299 Observations and 565 Variables
+  
+  - Original files contained 561 Variables, after cleaning four Variables weree introduced namely:
+      
+      * Activity Discription: Description of Activity Number, 1 = WALKING,2= WALKING_UPSTAIRS,3 = WALKING_DOWNSTAIRS, 4 = SITTING, 5 = STANDING, 6 = LAYING
+      
+      * Test.Train variable contains information on where the observation comes from after Joining the Train and Test sets.
+      
+      * Subject is the ID of the the individual from were the data came from
+      
+      * Activity.No is the Activity code
+      
+4) Obtaining only the measurements on the mean and standard deviation for each measurement
+
+  - The TidyData with 180 observations and 89 variables
+  
+5) Transform the Activity.No Variable in a descriptive variable,
+
+  - Added a new variable Called Activity.Description which has every code described in accordance with file activity.labels.txt
+  
+6) Renaming the variables with proper words describing what each variable has as outlined in the featuresinfo.txt file
+
+7) Genenerate a new file dataset, a tidy that has the averages for each activity and Subject.
+
+  - TidyData.csv file
+
+
+
+
