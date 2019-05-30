@@ -6,4 +6,5 @@ Files in this Repo:
 - Has all the information about the data and transformation done in order to make a tidy data set
 2) TidyData.csv
 - The Tidy Data set with 180 observations and 89 variables, ie the mean for each activity and subject on all parameters measured
-3) 
+3) getting and cleaning data week 4 assignment.R
+- The code for performing the downloading of raw data, cleaning and building a tidy data set
